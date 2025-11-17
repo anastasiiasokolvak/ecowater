@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта — EcoWater</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+<div class="container">
+    <div class="logo">
+        <span class="eco">ECO</span><span class="water">WATER</span>
+    </div>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a class="active" href="map.html">Карта</a></li>
+            <li><a href="#">Аналітика</a></li>
+            <li><a href="#">Про систему</a></li>
+            <li><a href="#">Контакти</a></li>
+        </ul>
+    </nav>
+
+    <a href="#" class="btn-login">Увійти</a>
+</div>
+</header>
+
+<!-- PAGE TITLE -->
+<section class="map-hero">
+<div class="container">
+    <h1>Карта моніторингу стану<br>водних ресурсів України</h1>
+    <p>Оберіть регіон, щоб переглянути дані<br>про якість води у реальному часі</p>
+</div>
+</section>
+
+<!-- FILTER + MAP -->
+<section class="map-section">
+<div class="container map-grid">
+
+    <!-- FILTERS -->
+    <div class="filters">
+        <h3>Фільтри</h3>
+
+        <select>
+            <option>Тип водойми</option>
+        </select>
+
+        <select>
+            <option>Показник якості</option>
+        </select>
+
+        <select>
+            <option>Рік</option>
+        </select>
+
+        <button class="btn-primary full">Застосувати фільтри</button>
+    </div>
+
+   <!-- MAP -->
+<div class="map-wrapper">
+    <div class="map-box">
+        <img src="images/map-ukraine-regions.png" alt="Карта України" class="map-img">
+    </div>
+
+    <div class="legend">
+        <p><span class="dot good"></span> Хороший стан</p>
+        <p><span class="dot mid"></span> Задовільний стан</p>
+        <p><span class="dot bad"></span> Поганий стан</p>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- STATS BLOCK -->
+<section class="map-stats">
+<div class="container stats-cards-mini">
+
+    <div class="mini-card">
+        <img src="images/icon-ph.png" class="icon">
+        <p class="label">Середній рівень pH</p>
+        <h3>7,3</h3>
+    </div>
+
+    <div class="mini-card">
+        <img src="images/icon-drop.png" class="icon">
+        <p class="label">Середня якість води</p>
+        <h3>82%</h3>
+    </div>
+
+    <div class="mini-card">
+        <img src="images/icon-waves.png" class="icon">
+        <p class="label">Рівень забруднення</p>
+        <h3>низький</h3>
+    </div>
+
+</div>
+</section>
+
+<!-- GRAPH -->
+<section class="map-graph">
+<div class="container">
+    <h2>Динаміка якості води за обраним регіоном</h2>
+    <p>Дані відображають середні показники pH та індексу якості води за останні 6 місяців.</p>
+
+    <!-- GRAPH PLACEHOLDER -->
+    <canvas id="waterChart"></canvas>
+</div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+<div class="container footer-content">
+    <div class="footer-col">
+        <h3><span class="eco">ECO</span><span class="water">WATER</span></h3>
+        <p>Інтелектуальна система моніторингу стану<br>водних ресурсів України</p>
+    </div>
+
+    <div class="footer-col">
+        <h4>Сторінки</h4>
+        <p>Головна</p>
+        <p>Карта</p>
+        <p>Аналітика</p>
+        <p>Про систему</p>
+        <p>Контакти</p>
+    </div>
+
+    <div class="footer-col">
+        <h4>Контакти</h4>
+        <p>Україна, м. Рівне</p>
+        <p>info@ecowater.ua</p>
+        <p>+38 (097) 123 45 67</p>
+    </div>
+</div>
+</div>
+
+<!-- Chart.js CDN (графік додамо потім) -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="chart-map.js"></script>
+
+</body>
+</html>

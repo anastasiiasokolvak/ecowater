@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoWater – Моніторинг стану водних ресурсів України</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!--HEADER-->
+<header>
+    <div class="container">
+        <div class="logo">
+            <span class="eco">ECO</span><span class="water">WATER</span>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Головна</a></li>
+                <li><a href="#">Карта</a></li>
+                <li><a href="#">Аналітика</a></li>
+                <li><a href="#">Про систему</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul>
+        </nav>
+
+        <a href="#" class="btn-login">Увійти</a>
+    </div>
+</header>
+
+
+<main>
+<section class="about-section">
+    <div class="container">
+        <h1 class="about-title">Про систему EcoWater</h1>
+
+        <p class="about-text">
+            EcoWater — це вебплатформа для моніторингу стану водних ресурсів України.
+            Система дозволяє переглядати дані про якість води, аналізувати тенденції 
+            та отримувати базові прогностичні оцінки екологічних показників.
+        </p>
+
+        <p class="about-text">
+            Мета платформи — зробити екологічну інформацію доступною, наочною та зрозумілою,
+            сприяти підвищенню рівня екологічної обізнаності населення та підтримати 
+            прийняття рішень у сфері водного менеджменту.
+        </p>
+
+
+        <!-- ===== ОСНОВНІ МОЖЛИВОСТІ ===== -->
+        <h2 class="section-title">Основні можливості системи</h2>
+
+        <div class="features">
+            <div class="feature-item">
+                <img src="icons/about-map.svg" alt="">
+                <h3>Інтерактивна карта України</h3>
+                <p>з відображенням показників якості води по регіонах</p>
+            </div>
+
+            <div class="feature-item">
+                <img src="icons/about-analytics.svg" alt="">
+                <h3>Аналітичні графіки</h3>
+                <p>для оцінки динаміки змін параметрів у часі</p>
+            </div>
+
+            <div class="feature-item">
+                <img src="icons/about-forecast.svg" alt="">
+                <h3>Базове прогнозування</h3>
+                <p>показників на основі трендових моделей</p>
+            </div>
+        </div>
+
+
+        <!-- ===== ЯК ПРАЦЮЄ СИСТЕМА ===== -->
+        <h2 class="section-title">Як працює система?</h2>
+
+        <p class="about-text small">
+            Система функціонує на основі таких етапів:
+        </p>
+
+        <p class="scheme">
+            Отримання даних → Обробка інформації → Візуалізація → 
+            Аналітика та прогнозування
+        </p>
+
+
+        <!-- ===== ТЕХНОЛОГІЇ ===== -->
+        <h2 class="section-title">Технології</h2>
+
+        <p class="about-text small">
+            EcoWater створено з використанням сучасних веб-технологій:
+        </p>
+
+        <ul class="tech-list">
+            <li>HTML / CSS / JavaScript</li>
+            <li>JSON-дані</li>
+            <li>Chart.js (візуалізація графіків)</li>
+            <li>Leaflet / або SVG-карта</li>
+            <li>Базові алгоритми прогнозування</li>
+        </ul>
+
+
+        <!-- ===== ПРИЗНАЧЕННЯ ===== -->
+        <h2 class="section-title">Призначення системи</h2>
+
+        <p class="about-text">
+            Платформа створена для студентів, дослідників, аналітиків, екологів 
+            та всіх, хто цікавиться станом довкілля.
+        </p>
+
+        <p class="about-text">
+            EcoWater може бути використана як навчальний інструмент, 
+            основа для наукових досліджень або прототип реальної моніторингової системи.
+        </p>
+
+
+        <!-- ===== АВТОР ===== -->
+        <h2 class="section-title">Автор проєкту</h2>
+
+        <p class="about-text">
+            Проєкт розроблено як демонстраційний вебзастосунок для моніторингу якості водних 
+            ресурсів України із застосуванням сучасних засобів веброзробки 
+            та базових методів прогностичної аналітики.
+        </p>
+    </div>
+</section>
+</main>
+
+<!--FOOTER-->
+<footer class="footer">
+    <div class="container footer-content">
+
+        <div class="footer-col">
+            <h3>ECOWATER</h3>
+            <p>Інтелектуальна система моніторингу стану<br>водних ресурсів України</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Сторінки</h4>
+            <p>Головна</p>
+            <p>Карта</p>
+            <p>Аналітика</p>
+            <p>Про систему</p>
+            <p>Контакти</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Контакти</h4>
+            <p>Україна, м. Рівне</p>
+            <p>info@ecowater.ua</p>
+            <p>+38 (097) 123 45 67</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Скрипти -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="data.js"></script>
+<script src="chart-main.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoWater – Моніторинг стану водних ресурсів України</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!--HEADER-->
+<header>
+    <div class="container">
+        <div class="logo">
+            <span class="eco">ECO</span><span class="water">WATER</span>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Головна</a></li>
+                <li><a href="#">Карта</a></li>
+                <li><a href="#">Аналітика</a></li>
+                <li><a href="#">Про систему</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul>
+        </nav>
+
+        <a href="#" class="btn-login">Увійти</a>
+    </div>
+</header>
+
+<main>
+
+<!--HERO-->
+<section class="hero">
+    <div class="container hero-container">
+
+        
+
+        <div class="hero-text">
+            <h1>Моніторинг стану<br>водних ресурсів України</h1>
+            <p>Отримуйте дані, аналізуйте показники та прогнозуйте якість води<br>у реальному часі</p>
+            <a href="#" class="btn-primary">Детальніше</a>
+        </div>
+
+
+        
+            <img src="images/map-ukraine.png" class="hero-map" alt="Карта України">
+        
+    </div>
+</section>
+
+<!--СТАТИСТИКА-->
+<section class="stats">
+    <div class="container">
+        <h2><strong>EcoWater</strong> – дані, що допомагають берегти довкілля</h2>
+        <p>Інтерактивна платформа для моніторингу та аналізу якості води в Україні.<br>
+        Дані з сенсорів і відкритих джерел – все в одному місці.</p>
+
+
+        <div class="stats-grid">
+        <div class="stat-item">
+    <img src="icons/icon-drop.svg" class="icon-water" alt="">
+    <h3>246</h3>
+    <p>водойми у системі</p>
+</div>
+
+<div class="stat-item">
+    <img src="icons/icon-map.svg" class="icon-map" alt="">
+    <h3>18</h3>
+    <p>регіонів України</p>
+</div>
+
+<div class="stat-item">
+    <img src="icons/icon-data.svg" class="icon-data" alt="">
+    <h3>120 000+</h3>
+    <p>записів даних</p>
+</div>
+
+      </div>  
+    </div>
+</section>
+
+<!-- ГРАФІК -->
+<section class="chart-section">
+    <div class="container">
+
+        <!-- Блок заголовка + іконка -->
+            <div class="chart-header">
+                <h2>Динаміка якості води</h2>
+                <span class="info-icon">ⓘ</span>
+
+                <!-- Tooltip -->
+                <div class="chart-tooltip">
+                    <span id="chart-ai-text"></span>
+                </div>
+            </div>
+        
+
+        <!-- Підзаголовок -->
+        <p class="chart-description">
+            Графік демонструє тенденції та дає можливість прогнозувати якість води
+            залежно від сезонних змін.
+        </p>
+
+        <!-- Графік -->
+        <canvas id="mainChart" width="1000" height="430"></canvas>
+
+    </div>
+</section>
+
+</main>
+
+<!--FOOTER-->
+<footer class="footer">
+    <div class="container footer-content">
+
+        <div class="footer-col">
+            <h3>ECOWATER</h3>
+            <p>Інтелектуальна система моніторингу стану<br>водних ресурсів України</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Сторінки</h4>
+            <p>Головна</p>
+            <p>Карта</p>
+            <p>Аналітика</p>
+            <p>Про систему</p>
+            <p>Контакти</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Контакти</h4>
+            <p>Україна, м. Рівне</p>
+            <p>info@ecowater.ua</p>
+            <p>+38 (097) 123 45 67</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Скрипти -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="data.js"></script>
+<script src="chart-main.js"></script>
+
+
+</body>
+</html>

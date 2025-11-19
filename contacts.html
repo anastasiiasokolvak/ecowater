@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoWater – Моніторинг стану водних ресурсів України</title>
+    <title>EcoWater – Контакти</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function() {
+            // Твій PUBLIC KEY з EmailJS
+            emailjs.init("ATlugq8TRB-lGeXpY");
+        })();
+    </script>
 </head>
 
 <body>
@@ -35,12 +44,13 @@
 <section class="contacts-page">
     <div class="container">
 
-        <h1 class="contact-title">Контакти Eco Water</h1>
+        <h1 class="contact-title">Контакти EcoWater</h1>
         <p class="contact-subtitle">
             Зв’яжіться з нами для співпраці, запитань або пропозицій щодо системи 
             моніторингу водних ресурсів
         </p>
 
+        <!-- Блок з іконками контактів -->
         <div class="contact-grid">
 
             <div class="contact-item">
@@ -94,24 +104,15 @@
         </div>
 
         <!-- Форма -->
-        <h2 class="form-title">Форма зворотнього зв'язку</h2>
+        <h2 class="form-title">Форма зворотного зв'язку</h2>
 
-        <!--<form class="contact-form">
-            <input type="text" placeholder="Ім’я" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Повідомлення" required></textarea>
+        <form id="contactForm" class="contact-form">
+            <input type="text" name="name" placeholder="Ваше ім’я" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Ваше повідомлення" required></textarea>
+
             <button type="submit">Надіслати</button>
-        </form>-->
-
-
-        <form class="contact-form" action="send.php" method="POST">
-    <input type="text" name="name" placeholder="Ім’я" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="message" placeholder="Повідомлення" required></textarea>
-
-    <button type="submit">Надіслати</button>
-</form>
-
+        </form>
 
         <!-- Картинка карти України -->
         <div class="contact-map">
@@ -149,11 +150,24 @@
     </div>
 </footer>
 
-<!-- Скрипти -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="data.js"></script>
-<script src="chart-main.js"></script>
+<!-- Скрипт для відправки форми через EmailJS -->
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
 
+    emailjs.send("service_arh0o5l", "template_61454f9", {
+        from_name: this.name.value,
+        from_email: this.email.value,
+        message: this.message.value
+    }).then(() => {
+        alert("Повідомлення успішно відправлено!");
+        this.reset();
+    }).catch((err) => {
+        alert("Сталася помилка при відправці. Спробуйте пізніше.");
+        console.error(err);
+    });
+});
+</script>
 
 </body>
 </html>

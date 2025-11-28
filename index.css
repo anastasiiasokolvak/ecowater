@@ -1,0 +1,165 @@
+.hero {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+}
+
+.hero .container {
+    position: relative;
+}
+
+.hero-map {
+    position: absolute;
+    right: 0;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 700px;
+    opacity: 0.35;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-text {
+    max-width: 550px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #2E4E6D;
+    line-height: 1.45;
+    margin-bottom: 25px;
+}
+
+.btn-primary {
+    padding: 12px 26px;
+    margin-top: 25px;
+    border-radius: 20px;
+    background: #00A6A6;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.25s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+.stats {
+    text-align: center;
+    padding: 70px 0 90px;
+}
+
+.stats h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0B2A4A;
+    margin-bottom: 12px;
+}
+
+.stats p {
+    font-size: 18px;
+    color: #2E4E6D;
+    max-width: 680px;
+    margin: 0 auto 55px;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+}
+
+.stat-item {
+    width: 200px;
+    text-align: center;
+}
+
+.stat-item img {
+    margin: 0 auto 14px;
+    opacity: 1;
+    filter: invert(17%) sepia(18%) saturate(1500%) hue-rotate(176deg) brightness(95%) contrast(90%);
+}
+
+.icon-water { width: 120px; height: 120px; }
+.icon-map   { width: 120px; height: 120px; }
+.icon-data  { width: 100px; height: 120px; }
+
+.stat-item h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.stat-item p {
+    font-size: 16px;
+    color: #1D3557;
+}
+
+.chart-section {
+    padding: 70px 0 90px;
+    text-align: center;
+}
+
+.chart-header {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.chart-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0B2A4A;
+}
+
+.info-icon {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00A6A6;
+    cursor: pointer;
+}
+
+.chart-tooltip {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    background: white;
+    border: 1px solid #dce7ec;
+    padding: 14px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.info-icon:hover + .chart-tooltip {
+    display: block;
+}
+
+.chart-description {
+    font-size: 18px;
+    color: #2E4E6D;
+    max-width: 680px;
+    margin: 0 auto 35px;
+}
+
+#mainChart {
+    display: block;
+    margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+}

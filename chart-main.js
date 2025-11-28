@@ -1,6 +1,3 @@
-// ======================================================
-// 0. AI-ФУНКЦІЯ ДЛЯ АВТОМАТИЧНОГО ОПИСУ ГРАФІКА
-// ======================================================
 function generateAIDescription(values) {
     const min = Math.min(...values);
     const max = Math.max(...values);
@@ -31,21 +28,13 @@ function generateAIDescription(values) {
     `;
 }
 
-
-
-// ======================================================
-// 1. РОЗРАХУНОК СЕРЕДНІХ ДАНИХ ПО УКРАЇНІ
-// ======================================================
-
-// Підготовка масивів на 12 місяців
 let avgPH = Array(12).fill(0);
 let avgQuality = Array(12).fill(0);
 
-let regionsCount = Object.keys(waterData).length;
+let regionsCount = Object.keys(regionsData).length;
 
-// Сума по всіх регіонах
-for (let region in waterData) {
-    let r = waterData[region];
+for (let region in regionsData) {
+    let r = regionsData[region];
 
     for (let i = 0; i < 12; i++) {
         avgPH[i] += r.monthlyPH[i];
@@ -53,16 +42,10 @@ for (let region in waterData) {
     }
 }
 
-// Середні значення
 avgPH = avgPH.map(v => Number((v / regionsCount).toFixed(2)));
 avgQuality = avgQuality.map(v => Number((v / regionsCount).toFixed(2)));
 
 console.log("Середній індекс якості:", avgQuality);
-
-
-// ======================================================
-// 2. ДИНАМІЧНІ МЕЖІ ГРАФІКА
-// ======================================================
 
 let minVal = Math.min(...avgQuality);
 let maxVal = Math.max(...avgQuality);
@@ -70,16 +53,7 @@ let maxVal = Math.max(...avgQuality);
 let yMin = Math.floor(minVal - 0.5);
 let yMax = Math.ceil(maxVal + 0.5);
 
-
-// ======================================================
-// 3. ПЕРЕДАЄМО AI-ТЕКСТ У TOOLTIP
-// ======================================================
 document.getElementById("chart-ai-text").innerText = generateAIDescription(avgQuality);
-
-
-// ======================================================
-// 4. ПОБУДОВА ГРАФІКА
-// ======================================================
 
 const ctx = document.getElementById("mainChart").getContext("2d");
 

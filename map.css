@@ -1,0 +1,240 @@
+/* =========================================
+   MAP PAGE — HERO
+========================================= */
+
+.map-hero {
+    padding: 60px 0 20px;
+    text-align: left;
+}
+
+.map-hero h1 {
+    font-size: 36px;
+    color: #0B2A4A;
+    margin-bottom: 10px;
+}
+
+.map-hero p {
+    font-size: 16px;
+    color: #2E4E6D;
+    max-width: 420px;
+}
+
+
+/* =========================================
+   MAP SECTION (Фільтри + Карта)
+========================================= */
+
+.map-section {
+    padding: 20px 0 40px;
+}
+
+.map-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+
+/* --- MAP WRAPPER --- */
+
+.map-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+/* --- SVG MAP --- */
+
+svg path {
+    fill: #a5c9d3;
+    stroke: #0b3a47;
+    stroke-width: 1;
+    transition: .3s;
+    cursor: pointer;
+}
+
+svg path:hover {
+    fill: #7fb1bf;
+}
+
+
+/* =========================================
+   LEGEND (Хороший / Задовільний / Поганий)
+========================================= */
+
+.legend {
+    margin-top: -50px;
+    margin-left: 20px;
+}
+
+.legend p {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.dot.good { background: #37b26c; }
+.dot.mid  { background: #ff9300; }
+.dot.bad  { background: #d92027; }
+
+
+/* =========================================
+   MINI STATS CARDS (під картою)
+========================================= */
+
+.stats-cards-mini {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.mini-card {
+    background: #E8F4F6;
+    width: 360px;
+    height: 250px;
+    padding: 24px 15px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.mini-card img {
+    width: 90px;
+    margin-bottom: 10px;
+    opacity: 0.85;
+}
+
+.mini-card .label {
+    font-size: 20px;
+    color: #0B2A4A;
+    margin-bottom: 6px;
+}
+
+
+
+.mini-card h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #0B2A4A;
+}
+
+
+/* =========================================
+   GRAPH SECTION BELOW MAP
+========================================= */
+
+.map-graph {
+    padding: 70px 0;
+    text-align: center;
+}
+
+.map-graph h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #0B2A4A;
+    margin-bottom: 6px;
+}
+
+.map-graph p {
+    font-size: 15px;
+    color: #2E4E6D;
+    margin-bottom: 25px;
+}
+
+#waterChart {
+    max-width: 900px;
+    height: 420px !important;
+    margin: 0 auto;
+    display: block;
+}
+
+.chart-placeholder {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #6c8a9a;
+    text-align: center;
+    opacity: 0.7;
+}
+/* =========================================
+   AI MODULE
+========================================= */
+
+#aiResult {
+    margin-top: 15px;
+    padding: 15px 20px;
+    background: #f5fbff;
+    border-left: 4px solid #0788aa;
+    border-radius: 6px;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #003049;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ai-module {
+    margin-top: 40px;
+    padding: 25px 30px;
+    background: #E8F4F6;
+    border-radius: 18px;
+    width: 100%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+#ai-module h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0B2A4A;
+    margin-bottom: 14px;
+}
+
+#aiForecastBtn {
+    background: #00A6A6;
+    color: #fff;
+    padding: 12px 26px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    margin-top: 10px;
+}
+
+/* Hover */
+#aiForecastBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 166, 166, 0.25);
+}
+
+/* Active */
+#aiForecastBtn:active {
+    transform: scale(0.96);
+}
+
+#aiResult {
+    margin-top: 18px;
+    padding: 18px 20px;
+    background: #f5fbff;
+    border-left: 4px solid #00A6A6;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1.55;
+    color: #003049;
+    display: none; /* з’являється тільки після прогнозу */
+}
